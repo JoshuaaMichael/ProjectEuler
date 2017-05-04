@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ProjectEulerLibrary;
 
 namespace ProjectEuler.Problems
 {
@@ -10,7 +7,16 @@ namespace ProjectEuler.Problems
     {
         public override void Run()
         {
-            Console.WriteLine("Hello world");
+            int sum = 0;
+            for(int i = 1; i < 1000; i++)
+            {
+                if(MathHelper.IsMultiple(i, 3) || MathHelper.IsMultiple(i, 5))
+                {
+                    sum += i;
+                }
+            }
+
+            Console.WriteLine("Result is: {0}", sum);
         }
     }
 }
