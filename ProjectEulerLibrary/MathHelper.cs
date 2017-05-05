@@ -32,5 +32,26 @@ namespace ProjectEulerLibrary
 
             return value;
         }
+
+        public static bool IsPalindrome(string value)
+        {
+            int start = 0;
+            int end = value.Length - 1;
+            while (true)
+            {
+                if (start > end)
+                {
+                    return true;
+                }
+                char a = value[start];
+                char b = value[end];
+                if (char.ToLower(a) != char.ToLower(b))
+                {
+                    return false;
+                }
+                start++;
+                end--;
+            }
+        }
     }
 }
