@@ -89,5 +89,19 @@ namespace ProjectEulerLibrary
 
 			return total;
 		}
+
+		public static bool IsPrime(long number)
+		{
+			if (number < 2) return false; //1 doesn't count, and negatives don't count
+
+			long boundary = (long)Math.Floor(Math.Sqrt(number));
+
+			for (int i = 2; i <= boundary; i++)
+			{
+				if (number % i == 0) return false;
+			}
+
+			return true;
+		}
 	}
 }
