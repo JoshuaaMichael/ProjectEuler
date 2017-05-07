@@ -127,5 +127,35 @@ namespace ProjectEulerLibrary
 			
 			return sum;
 		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="index">Starting from 1(1), thus 2(3), 3(6), 4(10)</param>
+		/// <returns></returns>
+		public static int GetTriangleNumber(int index)
+		{
+			int sum = 0;
+			for(int i = 1; i <= index; i++)
+			{
+				sum += i;
+			}
+
+			return sum;
+		}
+
+		public static int CountFactors(long number)
+		{
+			int numFactors = 0;
+			long max = (long)Math.Sqrt(number);
+			for (int factor = 1; factor <= max; factor++)
+			{
+				if (number % factor == 0)
+				{
+					numFactors += 2;
+				}
+			}
+			return numFactors;
+		}
 	}
 }
