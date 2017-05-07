@@ -53,5 +53,41 @@ namespace ProjectEulerLibrary
                 end--;
             }
         }
-    }
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="start">Inclusive</param>
+		/// <param name="finish">Inclusive</param>
+		/// <returns></returns>
+		public static long SumOfSquares(int start, int finish)
+		{
+			long total = 0;
+			for(int i = start; i <= finish; i++)
+			{
+				total += i * i;
+			}
+
+			return total;
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="start">Inclusive</param>
+		/// <param name="finish">Inclusive</param>
+		/// <returns></returns>
+		public static long SquareOfSums(int start, int finish)
+		{
+			long total = 0;
+			for (int i = start; i <= finish; i++)
+			{
+				total += i;
+			}
+
+			total *= total;
+
+			return total;
+		}
+	}
 }
