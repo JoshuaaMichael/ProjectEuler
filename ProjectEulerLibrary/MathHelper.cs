@@ -103,5 +103,17 @@ namespace ProjectEulerLibrary
 
 			return true;
 		}
+
+		public static long MultiplySingleDigits(string numbers)
+		{
+			long sum = int.Parse(numbers[0] + "");
+
+			for(int i = 1; i < numbers.Length; i++)
+			{
+				sum *= int.Parse(numbers[i] + ""); //Throws on NaN
+			}
+
+			return sum;
+		}
 	}
 }
