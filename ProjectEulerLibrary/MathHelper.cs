@@ -157,5 +157,25 @@ namespace ProjectEulerLibrary
 			}
 			return numFactors;
 		}
+
+		public static int CollatzSequenceChainCount(int start)
+		{
+			long value = start; //Figuring out this arithmetic overflow sucked, has to be long
+			int count = 0;
+			while(value != 1)
+			{
+				count++;
+				if(value % 2 == 0) //even
+				{
+					value /= 2;
+				}
+				else //odd
+				{
+					value = 3 * value + 1;
+				}
+			}
+
+			return count + 1; //Adding the 1 step
+		}
 	}
 }
