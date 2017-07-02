@@ -1,2 +1,2 @@
 Project Euler is a website dedicated to a series of computational problems intended to be solved with computer programs</br>
-There are my solutions to various problems on <a target="_blank" href="https://projecteuler.net/about">Project Euler</a></br>
+These are my solutions to various problems on <a target="_blank" href="https://projecteuler.net/about">Project Euler</a></br>
