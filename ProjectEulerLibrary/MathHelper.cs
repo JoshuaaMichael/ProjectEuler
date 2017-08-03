@@ -177,5 +177,31 @@ namespace ProjectEulerLibrary
 
 			return count + 1; //Adding the 1 step
 		}
+
+        public static bool IsPentagonal(long value)
+        {
+            double n = (Math.Sqrt((24 * value) + 1) + 1) / 6;
+            return n % 1 == 0;
+        }
+
+        public static bool IsHexagonal(long value)
+        {
+            double n = (Math.Sqrt((8 * value) + 1) + 1) / 4;
+            return n % 1 == 0;
+        }
+
+        public static long CalculateTriangleNumber(int n)
+        {
+            return (n * (n + 1)) / 2;
+        }
+
+        public static bool Balance(int n)
+        {
+            long tri = n * (n + 1) / 2;
+            long pent = n * ((3 * n) - 1) / 2;
+            long hex = n * ((2 * n) - 1);
+
+            return (tri == pent && pent == hex);
+        }
 	}
 }
