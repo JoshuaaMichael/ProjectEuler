@@ -7,7 +7,7 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            Problem problem = new Problem14();
+            Problem problem = new Problem20();
             problem.Setup();
             problem.Run();
             problem.Cleanup();
