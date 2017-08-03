@@ -51,6 +51,7 @@
     <Compile Include="Problems\Problem11.cs" />
     <Compile Include="Problems\Problem12.cs" />
     <Compile Include="Problems\Problem13.cs" />
+    <Compile Include="Problems\Problem22.cs" />
     <Compile Include="Problems\Problem25.cs" />
     <Compile Include="Problems\Problem20.cs" />
     <Compile Include="Problems\Problem16.cs" />
@@ -74,6 +75,11 @@
       <Project>{66a45d08-7824-4608-ad92-58bde5abbca8}</Project>
       <Name>ProjectEulerLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\p22_names.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
