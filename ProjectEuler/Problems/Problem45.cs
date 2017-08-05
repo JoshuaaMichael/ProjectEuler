@@ -15,8 +15,8 @@ namespace ProjectEuler.Problems
                 long num = i * (2 * i - 1);
                 if(MathHelper.IsPentagonal(num))
                 {
-                    Console.WriteLine("Woot num: {0}", num);
-                    Console.ReadLine();
+                    Console.WriteLine("Result is: {0}", num);
+                    break;
                 }
             }
         }
