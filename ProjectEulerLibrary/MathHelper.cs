@@ -208,5 +208,28 @@ namespace ProjectEulerLibrary
 
             return (tri == pent && pent == hex);
         }
-	}
+
+        public static long SumOfDivisors(long number)
+        {
+            long total = 1;
+            long max = (long)Math.Sqrt(number);
+            for (int factor = 2; factor <= max; factor++)
+            {
+                if (number % factor == 0)
+                {
+                    total += factor;
+                    total += number / factor;
+                }
+            }
+            return total;
+        }
+
+        public static bool IsAmicable(int number)
+        {
+            //d(a) = b and d(b) = a, where a ≠ b
+            long sum1 = SumOfDivisors(number);
+            long sum2 = SumOfDivisors(sum1);
+            return sum2 == number && sum1 != sum2;
+        }
+    }
 }
