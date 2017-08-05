@@ -7,13 +7,12 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            Problem problem = new Problem45();
+            Problem problem = new Problem44();
             problem.Setup();
+            problem.PreRun();
             problem.Run();
+            problem.PostRun();
             problem.Cleanup();
-
-            Console.WriteLine("Press enter to exit");
-            Console.ReadLine();
         }
     }
 }

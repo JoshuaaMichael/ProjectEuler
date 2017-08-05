@@ -178,6 +178,11 @@ namespace ProjectEulerLibrary
 			return count + 1; //Adding the 1 step
 		}
 
+        public static long CalculatePentagonalNumber(int n)
+        {
+            return (n * (3*n - 1)) / 2;
+        }
+
         public static bool IsPentagonal(long value)
         {
             double n = (Math.Sqrt((24 * value) + 1) + 1) / 6;
