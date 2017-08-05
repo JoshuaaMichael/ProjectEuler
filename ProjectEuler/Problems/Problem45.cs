@@ -1,8 +1,5 @@
 ﻿using System;
 using ProjectEulerLibrary;
-using System.Collections.Generic;
-using System.Numerics;
-using System.IO;
 
 namespace ProjectEuler.Problems
 {
