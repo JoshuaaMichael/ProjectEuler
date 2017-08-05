@@ -231,5 +231,16 @@ namespace ProjectEulerLibrary
             long sum2 = SumOfDivisors(sum1);
             return sum2 == number && sum1 != sum2;
         }
+
+        public static int ConsecutivePrimesQuadratic(int a, int b)
+        {
+            int n = 0;
+            while (IsPrime((n * n) + (a * n) + b))
+            {
+                n++;
+            }
+
+            return n;
+        }
     }
 }
