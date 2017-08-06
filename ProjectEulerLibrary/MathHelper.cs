@@ -183,6 +183,12 @@ namespace ProjectEulerLibrary
             return (n * (3*n - 1)) / 2;
         }
 
+        public static bool IsTriangle(long value)
+        {
+            double n = (Math.Sqrt((8 * value) + 1) - 1) / 2;
+            return n % 1 == 0;
+        }
+
         public static bool IsPentagonal(long value)
         {
             double n = (Math.Sqrt((24 * value) + 1) + 1) / 6;
@@ -347,6 +353,26 @@ namespace ProjectEulerLibrary
             }
 
             return count;
+        }
+
+        public static bool IsPandigital(string num)
+        {
+            if(num.Length < 1 || num.Length > 9)
+            {
+                return false;
+            }
+
+            List<char> chars = new List<char>(num.ToArray());
+            chars.Sort();
+
+            for(int i = 0; i < chars.Count; i++)
+            {
+                if(chars[i] != i + 49)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

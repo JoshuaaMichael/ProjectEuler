@@ -51,6 +51,9 @@
     <Compile Include="Problems\Problem11.cs" />
     <Compile Include="Problems\Problem12.cs" />
     <Compile Include="Problems\Problem13.cs" />
+    <Compile Include="Problems\Problem42.cs" />
+    <Compile Include="Problems\Problem38.cs" />
+    <Compile Include="Problems\Problem32.cs" />
     <Compile Include="Problems\Problem41.cs" />
     <Compile Include="Problems\Problem47.cs" />
     <Compile Include="Problems\Problem28.cs" />
@@ -89,6 +92,9 @@
   <ItemGroup>
     <Content Include="Resources\p22_names.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\p42_words.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

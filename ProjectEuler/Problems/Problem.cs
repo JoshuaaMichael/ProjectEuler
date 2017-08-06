@@ -26,7 +26,7 @@ namespace ProjectEuler.Problems
         public virtual void Cleanup()
         {
             Console.WriteLine();
-            Console.WriteLine("Solution took: {0} hours, {1} mintes, {2} seconds, {3} milliseconds", timer.Elapsed.Hours, timer.Elapsed.Minutes, timer.Elapsed.Seconds, timer.Elapsed.Milliseconds);
+            Console.WriteLine("Solution took: {0} hours, {1} minutes, {2} seconds, {3} milliseconds", timer.Elapsed.Hours, timer.Elapsed.Minutes, timer.Elapsed.Seconds, timer.Elapsed.Milliseconds);
             Console.WriteLine("Press enter to exit...");
             Console.ReadLine();
         }
