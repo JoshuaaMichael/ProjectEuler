@@ -9,7 +9,7 @@ namespace ProjectEuler.Problems
 {
     public abstract class Problem
     {
-        Stopwatch timer;
+        protected Stopwatch timer;
         public virtual void Setup()
         {
             timer = new Stopwatch();

@@ -51,6 +51,7 @@
     <Compile Include="Problems\Problem11.cs" />
     <Compile Include="Problems\Problem12.cs" />
     <Compile Include="Problems\Problem13.cs" />
+    <Compile Include="Problems\Problem41.cs" />
     <Compile Include="Problems\Problem47.cs" />
     <Compile Include="Problems\Problem28.cs" />
     <Compile Include="Problems\Problem27.cs" />
@@ -72,7 +73,6 @@
     <Compile Include="Problems\Problem6.cs" />
     <Compile Include="Problems\Problem7.cs" />
     <Compile Include="Problems\Problem8.cs" />
-    <Compile Include="Problems\Problem32.cs" />
     <Compile Include="Problems\Problem9.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

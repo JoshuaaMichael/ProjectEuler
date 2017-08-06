@@ -263,6 +263,25 @@ namespace ProjectEulerLibrary
             return primes;
         }
 
+        public static List<long> ListOfPrimes(int count)
+        {
+            List<long> primes = new List<long>();
+
+            if(count < 1)
+            {
+                throw new ArgumentException("Count too low");
+            }
+            primes.Add(2);
+            for (int i = 3; primes.Count < count; i += 2)
+            {
+                if (IsPrime(i))
+                {
+                    primes.Add(i);
+                }
+            }
+            return primes;
+        }
+
         public static string ShiftString(string str)
         {
             return str.Substring(1, str.Length - 1) + str.Substring(0, 1);
@@ -295,6 +314,39 @@ namespace ProjectEulerLibrary
                 }
             }
             return true;
+        }
+
+        public static List<long> ListAllFactors(long number)
+        {
+            List<long> factors = new List<long>();
+            long max = (long)Math.Sqrt(number);
+            for (int factor = 2; factor <= max; factor++)
+            {
+                if (number % factor == 0)
+                {
+                    factors.Add(factor);
+                    factors.Add(number / factor);
+                }
+            }
+            return factors;
+        }
+
+        public static int CountDistinctPrimeFactors(List<long> preComputedPrimes, long num)
+        {
+            int count = 0;
+            for(int i = 0; num != 1 && i < preComputedPrimes.Count; i++)
+            {
+                if (num % preComputedPrimes[i] == 0)
+                {
+                    count += 1;
+                    while (num % preComputedPrimes[i] == 0)
+                    {
+                        num /= preComputedPrimes[i];
+                    }
+                }
+            }
+
+            return count;
         }
     }
 }
