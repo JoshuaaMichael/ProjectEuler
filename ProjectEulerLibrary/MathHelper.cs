@@ -242,5 +242,59 @@ namespace ProjectEulerLibrary
 
             return n;
         }
+
+        public static HashSet<long> ListOfPrimeNumbers(long max)
+        {
+            HashSet<long> primes = new HashSet<long>();
+
+            if (max < 2)
+            {
+                return primes;
+            }
+
+            primes.Add(2);
+            for (int i = 3; i < max; i+=2)
+            {
+                if(IsPrime(i))
+                {
+                    primes.Add(i);
+                }
+            }
+            return primes;
+        }
+
+        public static string ShiftString(string str)
+        {
+            return str.Substring(1, str.Length - 1) + str.Substring(0, 1);
+        }
+
+        public static List<string> ListAllRotations(string str)
+        {
+            List<string> list = new List<string>();
+            list.Add(str);
+            string tempShift = str;
+            for(int i = 0; i < str.Length - 1; i++)
+            {
+                tempShift = ShiftString(tempShift);
+                list.Add(tempShift);
+            }
+            return list;
+        }
+
+        public static bool AreAllPrime(List<long> numbers)
+        {
+            if(numbers.Count == 0)
+            {
+                throw new ArgumentException("Empty list");
+            }
+            for(int i = 0; i < numbers.Count; i++)
+            {
+                if(!IsPrime(numbers[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }
