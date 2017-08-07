@@ -250,19 +250,24 @@ namespace ProjectEulerLibrary
             return n;
         }
 
-        public static HashSet<long> ListOfPrimeNumbers(long max)
+        public static HashSet<long> HashsetOfPrimeNumbers(long max)
         {
-            HashSet<long> primes = new HashSet<long>();
+            List<long> primes = ListOfPrimeNumbers(max);
+            return new HashSet<long>(primes);
+        }
 
+        public static List<long> ListOfPrimeNumbers(long max)
+        {
+            List<long> primes = new List<long>();
             if (max < 2)
             {
                 return primes;
             }
 
             primes.Add(2);
-            for (int i = 3; i < max; i+=2)
+            for (int i = 3; i < max; i += 2)
             {
-                if(IsPrime(i))
+                if (IsPrime(i))
                 {
                     primes.Add(i);
                 }

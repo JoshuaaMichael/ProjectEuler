@@ -8,7 +8,7 @@ namespace ProjectEuler.Problems
 	{
         public override void Run()
         {
-            HashSet<long> primes = MathHelper.ListOfPrimeNumbers(1000000);
+            HashSet<long> primes = MathHelper.HashsetOfPrimeNumbers(1000000);
 
             int count = 0;
             foreach(long prime in primes)
