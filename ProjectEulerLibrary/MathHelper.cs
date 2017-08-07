@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -373,6 +374,16 @@ namespace ProjectEulerLibrary
                 }
             }
             return true;
+        }
+
+        public static BigInteger Pow(int x, uint y)
+        {
+            BigInteger total = x;
+            for (int i = 1; i < y; i++)
+            {
+                total *= x;
+            }
+            return total;
         }
     }
 }
