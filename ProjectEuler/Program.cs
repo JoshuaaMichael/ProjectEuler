@@ -1,5 +1,7 @@
 ﻿using System;
 using ProjectEuler.Problems;
+using System.Diagnostics;
+using ProjectEulerLibrary;
 
 namespace ProjectEuler
 {
@@ -13,6 +15,6 @@ namespace ProjectEuler
             problem.Run();
             problem.PostRun();
             problem.Cleanup();
-        }
+        }        
     }
 }
