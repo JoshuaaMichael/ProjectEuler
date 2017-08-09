@@ -28,10 +28,9 @@ namespace ProjectEuler
             PrimeHelper.ArrayOfPrimeNumbersToMax(maxNumber);
         }
 
-        static void Main()
+        static void Main2()
         {
             PrimeHelper.ArrayOfPrimeNumbersToMax_dev2(1000);
-            return;
 
             Action<int> a = SUT;
             BenchmarkPrimeSieve(a, 50, 100000000); //action, iterations, maxNumber
