@@ -18,7 +18,7 @@ namespace ProjectEuler.Problems
                 {
                     string temp = a.ToString() + b.ToString() + (a * b).ToString() + "";
 
-                    if (temp.Length == 9 && MathHelper.IsPandigital(temp))
+                    if (temp.Length == 9 && MathHelper.IsPandigital9DigitNumber(temp))
                     {
                         if (!products.Contains(a * b))
                         {

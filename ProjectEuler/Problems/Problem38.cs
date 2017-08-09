@@ -18,7 +18,7 @@ namespace ProjectEuler.Problems
                 }
                 if(str.Length == 9 && long.Parse(str) > max)
                 {
-                    if(MathHelper.IsPandigital(str))
+                    if(MathHelper.IsPandigital9DigitNumber(str))
                     {
                         max = long.Parse(str);
                     }                  

@@ -361,9 +361,9 @@ namespace ProjectEulerLibrary
             return count;
         }
 
-        public static bool IsPandigital(string num)
+        public static bool IsPandigital9DigitNumber(string num)
         {
-            if(num.Length < 1 || num.Length > 9)
+            if(num.Length != 9)
             {
                 return false;
             }
@@ -374,6 +374,26 @@ namespace ProjectEulerLibrary
             for(int i = 0; i < chars.Count; i++)
             {
                 if(chars[i] != i + 49)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool IsPandigital10DigitNum(string num)
+        {
+            if (num.Length != 10)
+            {
+                return false;
+            }
+
+            List<char> chars = new List<char>(num.ToArray());
+            chars.Sort();
+
+            for (int i = 0; i < chars.Count; i++)
+            {
+                if (chars[i] != i + 48)
                 {
                     return false;
                 }
