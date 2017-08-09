@@ -410,5 +410,16 @@ namespace ProjectEulerLibrary
             }
             return total;
         }
+
+        public static bool IsSquare(int num)
+        {
+            if (num % 10 == 2 || num % 10 == 3 || num % 10 == 7 || num % 10 == 8)
+                return false;
+
+            long root = (long)Math.Round(Math.Sqrt(num));
+
+            return root * root == num;
+        }
+
     }
 }
