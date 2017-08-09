@@ -19,7 +19,7 @@ namespace ProjectEuler.Problems
 
             string outputStr = str.ToString();
             int total = 1;
-            for(int i = 1; i <= 1000000; i*=10) {
+            for(int i = 1; i <= 1000000; i*=10)
             {
                 total *= int.Parse(outputStr[i - 1] + "");
             }
