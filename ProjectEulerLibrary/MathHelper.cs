@@ -343,6 +343,21 @@ namespace ProjectEulerLibrary
             return factors;
         }
 
+        public static List<long> ListAllProperFactors(long number)
+        {
+            List<long> factors = new List<long>();
+            factors.Add(1);
+            for (int factor = 2; factor < number; factor++)
+            {
+                if (number % factor == 0)
+                {
+                    factors.Add(factor);
+                }
+            }
+            return factors;
+        }
+
+
         public static int CountDistinctPrimeFactors(List<long> preComputedPrimes, long num)
         {
             int count = 0;
