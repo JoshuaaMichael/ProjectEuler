@@ -9,45 +9,101 @@ namespace ProjectEuler.Problems
 	{
 		public override void Run()
 		{
-            //generate primes up to 10000
-            //remove any less than 1000
-            //make a hashset
+            int[] primes = PrimeHelper.ArrayOfPrimeNumbersToMax(9999);
+            HashSet<int> primeHashset = new HashSet<int>(primes);
 
-            //foreach prime
-                // find permutation, check is prime
-                    //if found, put into a list
-                //then check the list for an arithmetic sequence
-        
+            HashSet<string> tested = new HashSet<string>();
 
-            
+            foreach(int prime in primes)
+            {
+                if(prime.ToString().Length < 4)
+                {
+                    continue;
+                }
 
-			Console.WriteLine("Result is: {0}", 0);
+                if(tested.Contains(prime.ToString()))
+                {
+                    continue;
+                }
+                
+                //Now we have a four digit prime we haven't tested before
+
+                List<string> permutations = new List<string>();
+                string str = prime.ToString();
+                char[] arr = str.ToCharArray();
+                Permute(permutations, arr, 0, arr.Length - 1);
+
+                List<int> primePermutations = new List<int>();
+                foreach (string permute in permutations)
+                {
+                    if(MathHelper.IsPrime(int.Parse(permute)))
+                    {
+                        if(!primePermutations.Contains(int.Parse(permute)))
+                        {
+                            primePermutations.Add(int.Parse(permute));
+                            tested.Add(permute);
+                        }
+                    }
+                }
+
+                primePermutations.Sort();
+
+                List<int> arrSeqence = FindArithmeticSequence(primePermutations);
+
+                if(arrSeqence != null)
+                {
+                    Console.WriteLine("Result:");
+                    foreach (int num in arrSeqence)
+                    {
+                        Console.Write(" {0}", num);
+                    }
+                    Console.WriteLine();
+                }
+            }
+
 		}
 
-        private int[] GeneratePermutations(int num)
+        private static void Permute(List<string> results, char[] elements, int recursionDepth, int maxDepth)
         {
-            // break number into digit list
+            if (recursionDepth == maxDepth)
+            {
+                results.Add(new string(elements));
+                return;
+            }
 
-            // for each digit in digit list
-            //    GenPerm()
-            return null;
-            
+            for (int i = recursionDepth; i <= maxDepth; i++)
+            {
+                Swap(ref elements[recursionDepth], ref elements[i]);
+                Permute(results, elements, recursionDepth + 1, maxDepth);
+                // backtrack
+                Swap(ref elements[recursionDepth], ref elements[i]);
+            }
         }
 
-        private int[] GeneratePermutationsOf4DigitNum(int num)
+        private static void Swap(ref char a, ref char b)
         {
-            //num = 3421
-            //int[] numArr = {3, 4, 2, 1};
+            char tmp = a;
+            a = b;
+            b = tmp;
+        }
 
-            //int[] results = new int[];
-            //for() //first digit
-            //for() //second digit
-            //for() //third digit
-            //for() //fourth digit
-
-            //return results;
+        private static List<int> FindArithmeticSequence(List<int> values)
+        {
+            for(int i = 0; i < values.Count - 1; i++)
+            {
+                for (int j = i + 1; j < values.Count; j++)
+                {
+                    if(values.Contains(2*values[j] - values[i]))
+                    {
+                        List<int> result = new List<int>();
+                        result.Add(values[i]);
+                        result.Add(values[j]);
+                        result.Add(2 * values[j] - values[i]);
+                        return result;
+                    }
+                }
+            }
             return null;
-
         }
     }
 }
