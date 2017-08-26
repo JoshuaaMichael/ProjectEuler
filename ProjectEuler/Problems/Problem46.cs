@@ -1,51 +1,53 @@
 ﻿using System;
 using ProjectEulerLibrary;
 using System.Collections.Generic;
-using System.Text;
-using System.IO;
 
 namespace ProjectEuler.Problems
 {
-    class Problem46 : Problem
-    {
+	class Problem46 : Problem
+	{
         public override void Run()
         {
-            int[] primes = PrimeHelper.ArrayOfPrimeNumbersToMax(100000000);
-            HashSet<int> primesHashSet = new HashSet<int>(primes);
-            HashSet<int> squares = GetSquareNumbersHashset(100000000);
+            int max = 1000000;
+            int[] primes = PrimeHelper.ArrayOfPrimeNumbersToMax(max);
+            HashSet<int> primesHashset = new HashSet<int>(primes); //!.contains = composite
+            HashSet<int> squareHashset = GenerateHashSetOfSquareNumbers(1, 10000);
 
-            for (int i = 3; i > 0 ; i += 2)
+            for(int i = 9; i < max; i+=2) //Only odd numbers
             {
-                //odd comp
-                if (!primesHashSet.Contains(i))
+                if (!primesHashset.Contains(i)) //Is composite
                 {
-                    bool success = false;
-                    for (int j = 0; primes[j] < i; j++)
+                    bool found = false;
+                    for (int j = 0; j < primes.Length && primes[j] < i; j++)
                     {
-                        if(!squares.Contains((i - primes[j]) / 2))
+                        int temp = (i - primes[j]) / 2;
+
+                        if (squareHashset.Contains(temp))
                         {
-                            success = true;
+                            found = true;
                             break;
                         }
                     }
 
-                    if(!success)
-                    {
-                        Console.WriteLine("Result is: {0}", i);
+                    if (!found)
+                    { 
+                        Console.WriteLine("Result is {0}", i);
                         return;
                     }
                 }
+
             }
         }
 
-        public HashSet<int> GetSquareNumbersHashset(int maxValue)
+        private HashSet<int> GenerateHashSetOfSquareNumbers(int minBase, int maxBase)
         {
-            HashSet<int> squares = new HashSet<int>();
-            for(int i = 1; i * i < maxValue; i++)
+            HashSet<int> result = new HashSet<int>();
+            for (int i = minBase; i <= maxBase; i++)
             {
-                squares.Add(i * i);
+                result.Add(i * i);
             }
-            return squares;
+
+            return result;
         }
     }
 }
