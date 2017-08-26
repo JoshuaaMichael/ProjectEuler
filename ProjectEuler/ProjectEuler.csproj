@@ -47,7 +47,16 @@
   <ItemGroup>
     <Compile Include="BenchMarking.cs" />
     <Compile Include="Problems\Problem.cs" />
+    <Compile Include="Problems\Problem37.cs" />
     <Compile Include="Problems\Problem1.cs" />
+    <Compile Include="Problems\Problem46.cs" />
+    <Compile Include="Problems\Problem58.cs" />
+    <Compile Include="Problems\Problem77.cs" />
+    <Compile Include="Problems\Problem99.cs" />
+    <Compile Include="Problems\Problem76.cs" />
+    <Compile Include="Problems\Problem63.cs" />
+    <Compile Include="Problems\Problem79.cs" />
+    <Compile Include="Problems\Problem89.cs" />
     <Compile Include="Problems\Problem56.cs" />
     <Compile Include="Problems\Problem55.cs" />
     <Compile Include="Problems\Problem87.cs" />
@@ -62,8 +71,6 @@
     <Compile Include="Problems\Problem12.cs" />
     <Compile Include="Problems\Problem13.cs" />
     <Compile Include="Problems\Problem34.cs" />
-    <Compile Include="Problems\Problem37.cs" />
-    <Compile Include="Problems\Problem46.cs" />
     <Compile Include="Problems\Problem40.cs" />
     <Compile Include="Problems\Problem43.cs" />
     <Compile Include="Problems\Problem50.cs" />
@@ -109,6 +116,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\p079_keylog.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\p089_roman.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\p099_base_exp.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\p22_names.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
