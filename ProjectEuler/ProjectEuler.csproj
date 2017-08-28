@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PrimeSieve">
+      <HintPath>..\..\PrimeSieve\PrimeSieve\bin\Release\PrimeSieve.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
@@ -49,6 +52,8 @@
     <Compile Include="Problems\Problem.cs" />
     <Compile Include="Problems\Problem37.cs" />
     <Compile Include="Problems\Problem1.cs" />
+    <Compile Include="Problems\Problem60.cs" />
+    <Compile Include="Problems\Problem59.cs" />
     <Compile Include="Problems\Problem46.cs" />
     <Compile Include="Problems\Problem58.cs" />
     <Compile Include="Problems\Problem77.cs" />
@@ -116,6 +121,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\p059_cipher.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\p079_keylog.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
