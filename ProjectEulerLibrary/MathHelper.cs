@@ -436,5 +436,36 @@ namespace ProjectEulerLibrary
             return root * root == num;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="results">Blank list for results</param>
+        /// <param name="elements">Char array of string to permute</param>
+        /// <param name="maxDepth">arr.Length - 1</param>
+        /// <param name="recursionDepth">Leave default, 0</param>
+        public static void Permute(List<string> results, char[] elements, int maxDepth, int recursionDepth = 0)
+        {
+            if (recursionDepth == maxDepth)
+            {
+                results.Add(new string(elements));
+                return;
+            }
+
+            for (int i = recursionDepth; i <= maxDepth; i++)
+            {
+                Swap(ref elements[recursionDepth], ref elements[i]);
+                Permute(results, elements, maxDepth, recursionDepth + 1);
+                // backtrack
+                Swap(ref elements[recursionDepth], ref elements[i]);
+            }
+        }
+
+        private static void Swap(ref char a, ref char b)
+        {
+            char tmp = a;
+            a = b;
+            b = tmp;
+        }
+
     }
 }
