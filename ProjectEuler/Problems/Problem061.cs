@@ -51,7 +51,7 @@ namespace ProjectEuler.Problems
 
                 }
 
-                int lastDigits = polygonalType % 100;
+                //int lastDigits = polygonalType % 100;
 
                 //Recursion(temp);
             }

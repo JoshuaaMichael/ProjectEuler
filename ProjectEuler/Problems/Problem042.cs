@@ -9,7 +9,7 @@ namespace ProjectEuler.Problems
 	{
         public override void Run()
         {
-            string data = File.ReadAllText("./Resources/p42_words.txt");
+            string data = File.ReadAllText("./Resources/p042_words.txt");
             data = data.Replace("\"", "");
             string[] lines = data.Split(',');
             List<string> words = new List<string>(lines);

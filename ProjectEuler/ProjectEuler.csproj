@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="BenchMarking.cs" />
     <Compile Include="Problems\Problem.cs" />
+    <Compile Include="Problems\Problem18.cs" />
     <Compile Include="Problems\Problem61.cs" />
     <Compile Include="Problems\Problem357.cs" />
     <Compile Include="Problems\Problem145.cs" />
@@ -130,6 +131,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\p018_triangle.txt" />
+    <Content Include="Resources\p022_names.txt" />
+    <Content Include="Resources\p042_words.txt" />
     <Content Include="Resources\p059_cipher.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -141,12 +145,6 @@
     </Content>
     <Content Include="Resources\p099_base_exp.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\p22_names.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\p42_words.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

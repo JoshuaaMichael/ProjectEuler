@@ -11,7 +11,7 @@ namespace ProjectEuler.Problems
 		public override void Run()
 		{
 
-            string data = File.ReadAllText("./Resources/p22_names.txt");
+            string data = File.ReadAllText("./Resources/p022_names.txt");
             data = data.Replace("\"", "");
             string[] lines = data.Split(',');
             List<string> names = new List<string>(lines);
