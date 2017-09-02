@@ -50,74 +50,74 @@
   <ItemGroup>
     <Compile Include="BenchMarking.cs" />
     <Compile Include="Problems\Problem.cs" />
-    <Compile Include="Problems\Problem18.cs" />
-    <Compile Include="Problems\Problem61.cs" />
+    <Compile Include="Problems\Problem018.cs" />
+    <Compile Include="Problems\Problem061.cs" />
     <Compile Include="Problems\Problem357.cs" />
     <Compile Include="Problems\Problem145.cs" />
-    <Compile Include="Problems\Problem66.cs" />
-    <Compile Include="Problems\Problem37.cs" />
-    <Compile Include="Problems\Problem1.cs" />
+    <Compile Include="Problems\Problem066.cs" />
+    <Compile Include="Problems\Problem037.cs" />
+    <Compile Include="Problems\Problem001.cs" />
     <Compile Include="Problems\Problem206.cs" />
-    <Compile Include="Problems\Problem68.cs" />
-    <Compile Include="Problems\Problem62.cs" />
-    <Compile Include="Problems\Problem97.cs" />
-    <Compile Include="Problems\Problem60.cs" />
-    <Compile Include="Problems\Problem59.cs" />
-    <Compile Include="Problems\Problem46.cs" />
-    <Compile Include="Problems\Problem58.cs" />
-    <Compile Include="Problems\Problem77.cs" />
-    <Compile Include="Problems\Problem70.cs" />
-    <Compile Include="Problems\Problem99.cs" />
-    <Compile Include="Problems\Problem76.cs" />
-    <Compile Include="Problems\Problem63.cs" />
-    <Compile Include="Problems\Problem79.cs" />
-    <Compile Include="Problems\Problem89.cs" />
-    <Compile Include="Problems\Problem56.cs" />
-    <Compile Include="Problems\Problem55.cs" />
-    <Compile Include="Problems\Problem87.cs" />
-    <Compile Include="Problems\Problem23.cs" />
-    <Compile Include="Problems\Problem52.cs" />
-    <Compile Include="Problems\Problem10.cs" />
-    <Compile Include="Problems\Problem49.cs" />
-    <Compile Include="Problems\Problem19.cs" />
-    <Compile Include="Problems\Problem17.cs" />
+    <Compile Include="Problems\Problem068.cs" />
+    <Compile Include="Problems\Problem062.cs" />
+    <Compile Include="Problems\Problem097.cs" />
+    <Compile Include="Problems\Problem060.cs" />
+    <Compile Include="Problems\Problem059.cs" />
+    <Compile Include="Problems\Problem046.cs" />
+    <Compile Include="Problems\Problem058.cs" />
+    <Compile Include="Problems\Problem077.cs" />
+    <Compile Include="Problems\Problem070.cs" />
+    <Compile Include="Problems\Problem099.cs" />
+    <Compile Include="Problems\Problem076.cs" />
+    <Compile Include="Problems\Problem063.cs" />
+    <Compile Include="Problems\Problem079.cs" />
+    <Compile Include="Problems\Problem089.cs" />
+    <Compile Include="Problems\Problem056.cs" />
+    <Compile Include="Problems\Problem055.cs" />
+    <Compile Include="Problems\Problem087.cs" />
+    <Compile Include="Problems\Problem023.cs" />
+    <Compile Include="Problems\Problem052.cs" />
+    <Compile Include="Problems\Problem010.cs" />
+    <Compile Include="Problems\Problem049.cs" />
+    <Compile Include="Problems\Problem019.cs" />
+    <Compile Include="Problems\Problem017.cs" />
     <Compile Include="Problems\Problem138.cs" />
-    <Compile Include="Problems\Problem11.cs" />
-    <Compile Include="Problems\Problem12.cs" />
-    <Compile Include="Problems\Problem13.cs" />
-    <Compile Include="Problems\Problem34.cs" />
-    <Compile Include="Problems\Problem40.cs" />
-    <Compile Include="Problems\Problem43.cs" />
-    <Compile Include="Problems\Problem50.cs" />
-    <Compile Include="Problems\Problem30.cs" />
-    <Compile Include="Problems\Problem29.cs" />
-    <Compile Include="Problems\Problem42.cs" />
-    <Compile Include="Problems\Problem38.cs" />
-    <Compile Include="Problems\Problem32.cs" />
-    <Compile Include="Problems\Problem41.cs" />
-    <Compile Include="Problems\Problem48.cs" />
-    <Compile Include="Problems\Problem47.cs" />
-    <Compile Include="Problems\Problem28.cs" />
-    <Compile Include="Problems\Problem27.cs" />
-    <Compile Include="Problems\Problem21.cs" />
-    <Compile Include="Problems\Problem31.cs" />
-    <Compile Include="Problems\Problem35.cs" />
-    <Compile Include="Problems\Problem36.cs" />
-    <Compile Include="Problems\Problem44.cs" />
-    <Compile Include="Problems\Problem45.cs" />
-    <Compile Include="Problems\Problem22.cs" />
-    <Compile Include="Problems\Problem25.cs" />
-    <Compile Include="Problems\Problem20.cs" />
-    <Compile Include="Problems\Problem16.cs" />
-    <Compile Include="Problems\Problem14.cs" />
-    <Compile Include="Problems\Problem2.cs" />
-    <Compile Include="Problems\Problem3.cs" />
-    <Compile Include="Problems\Problem4.cs" />
-    <Compile Include="Problems\Problem5.cs" />
-    <Compile Include="Problems\Problem6.cs" />
-    <Compile Include="Problems\Problem7.cs" />
-    <Compile Include="Problems\Problem8.cs" />
-    <Compile Include="Problems\Problem9.cs" />
+    <Compile Include="Problems\Problem011.cs" />
+    <Compile Include="Problems\Problem012.cs" />
+    <Compile Include="Problems\Problem013.cs" />
+    <Compile Include="Problems\Problem034.cs" />
+    <Compile Include="Problems\Problem040.cs" />
+    <Compile Include="Problems\Problem043.cs" />
+    <Compile Include="Problems\Problem050.cs" />
+    <Compile Include="Problems\Problem030.cs" />
+    <Compile Include="Problems\Problem029.cs" />
+    <Compile Include="Problems\Problem042.cs" />
+    <Compile Include="Problems\Problem038.cs" />
+    <Compile Include="Problems\Problem032.cs" />
+    <Compile Include="Problems\Problem041.cs" />
+    <Compile Include="Problems\Problem048.cs" />
+    <Compile Include="Problems\Problem047.cs" />
+    <Compile Include="Problems\Problem028.cs" />
+    <Compile Include="Problems\Problem027.cs" />
+    <Compile Include="Problems\Problem021.cs" />
+    <Compile Include="Problems\Problem031.cs" />
+    <Compile Include="Problems\Problem035.cs" />
+    <Compile Include="Problems\Problem036.cs" />
+    <Compile Include="Problems\Problem044.cs" />
+    <Compile Include="Problems\Problem045.cs" />
+    <Compile Include="Problems\Problem022.cs" />
+    <Compile Include="Problems\Problem025.cs" />
+    <Compile Include="Problems\Problem020.cs" />
+    <Compile Include="Problems\Problem016.cs" />
+    <Compile Include="Problems\Problem014.cs" />
+    <Compile Include="Problems\Problem002.cs" />
+    <Compile Include="Problems\Problem003.cs" />
+    <Compile Include="Problems\Problem004.cs" />
+    <Compile Include="Problems\Problem005.cs" />
+    <Compile Include="Problems\Problem006.cs" />
+    <Compile Include="Problems\Problem007.cs" />
+    <Compile Include="Problems\Problem008.cs" />
+    <Compile Include="Problems\Problem009.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -131,10 +131,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\p018_triangle.txt" />
-    <Content Include="Resources\p022_names.txt" />
-    <Content Include="Resources\p042_words.txt" />
+    <Content Include="Resources\p018_triangle.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\p022_names.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\p042_words.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\p059_cipher.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\p067_triangle.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\p079_keylog.txt">
