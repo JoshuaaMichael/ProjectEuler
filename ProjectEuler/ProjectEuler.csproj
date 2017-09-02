@@ -50,6 +50,10 @@
   <ItemGroup>
     <Compile Include="BenchMarking.cs" />
     <Compile Include="Problems\Problem.cs" />
+    <Compile Include="Problems\Problem61.cs" />
+    <Compile Include="Problems\Problem357.cs" />
+    <Compile Include="Problems\Problem145.cs" />
+    <Compile Include="Problems\Problem66.cs" />
     <Compile Include="Problems\Problem37.cs" />
     <Compile Include="Problems\Problem1.cs" />
     <Compile Include="Problems\Problem206.cs" />
@@ -61,6 +65,7 @@
     <Compile Include="Problems\Problem46.cs" />
     <Compile Include="Problems\Problem58.cs" />
     <Compile Include="Problems\Problem77.cs" />
+    <Compile Include="Problems\Problem70.cs" />
     <Compile Include="Problems\Problem99.cs" />
     <Compile Include="Problems\Problem76.cs" />
     <Compile Include="Problems\Problem63.cs" />

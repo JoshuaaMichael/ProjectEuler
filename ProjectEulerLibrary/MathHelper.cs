@@ -202,6 +202,24 @@ namespace ProjectEulerLibrary
             return n % 1 == 0;
         }
 
+        public static bool IsSquare(long value)
+        {
+            double n = (Math.Sqrt(value));
+            return n % 1 == 0;
+        }
+
+        public static bool IsHeptagonal(long value)
+        {
+            double n = (Math.Sqrt(40 * value + 9) + 3) / 10;
+            return n % 1 == 0;
+        }
+
+        public static bool IsOctagonal(long value)
+        {
+            double n = (Math.Sqrt(3 * value + 1) + 1) / 3;
+            return n % 1 == 0;
+        }
+
         public static long CalculateTriangleNumber(int n)
         {
             return (n * (n + 1)) / 2;
@@ -328,21 +346,6 @@ namespace ProjectEulerLibrary
             return true;
         }
 
-        public static List<long> ListAllFactors(long number)
-        {
-            List<long> factors = new List<long>();
-            long max = (long)Math.Sqrt(number);
-            for (int factor = 2; factor <= max; factor++)
-            {
-                if (number % factor == 0)
-                {
-                    factors.Add(factor);
-                    factors.Add(number / factor);
-                }
-            }
-            return factors;
-        }
-
         public static List<long> ListAllProperFactors(long number)
         {
             List<long> factors = new List<long>();
@@ -467,5 +470,53 @@ namespace ProjectEulerLibrary
             b = tmp;
         }
 
+        /// <summary>
+        /// Euler's totient function
+        /// </summary>
+        /// <param name="x">Given value to test</param>
+        /// <param name="primes">List of primes must contain all primes up to sqrt of x</param>
+        /// <returns></returns>
+        public static int Totient(int x, int[] primes)
+        {
+            if(primes[primes.Length - 1] < x)
+            {
+                throw new ArgumentException("Primes list must contain all primes up to and including sqrt(x)");
+            }
+
+            int phiResult = 1;
+            int sqrtX = (int)Math.Sqrt(x);
+            int p = 0;
+            for(int i = 0; primes[i] <= sqrtX; i++)
+            {
+                p = primes[i];
+                if (x % p == 0)
+                {
+                    phiResult *= (p - 1);
+                    x /= p;
+                }
+                while (x % p == 0)
+                {
+                    phiResult *= p;
+                    x /= p;
+                }
+            }
+
+            if(x != 1)
+                phiResult *= (x - 1);
+
+            return phiResult;
+        }
+
+        public static string SortString(string str)
+        {
+            char[] tCharArray = str.ToCharArray();
+            Array.Sort(tCharArray);
+            return new string(tCharArray);
+        }
+
+        public static bool IsPermutation(string str1, string str2)
+        {
+            return SortString(str1).CompareTo(SortString(str2)) == 0;
+        }
     }
 }
