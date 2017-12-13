@@ -49,10 +49,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BenchMarking.cs" />
+    <Compile Include="Problems\Classes\SuDokuPuzzle.cs" />
     <Compile Include="Problems\Problem.cs" />
+    <Compile Include="Problems\Problem094.cs" />
+    <Compile Include="Problems\Problem109.cs" />
+    <Compile Include="Problems\Problem098.cs" />
     <Compile Include="Problems\Problem067.cs" />
     <Compile Include="Problems\Problem018.cs" />
     <Compile Include="Problems\Problem061.cs" />
+    <Compile Include="Problems\Problem096.cs" />
+    <Compile Include="Problems\Problem315.cs" />
     <Compile Include="Problems\Problem357.cs" />
     <Compile Include="Problems\Problem145.cs" />
     <Compile Include="Problems\Problem066.cs" />
@@ -151,6 +157,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\p089_roman.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\p096_sudoku.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\p098_words.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\p099_base_exp.txt">
