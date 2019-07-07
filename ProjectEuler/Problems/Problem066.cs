@@ -1,69 +1,49 @@
 ﻿using System;
 using ProjectEulerLibrary;
 using System.Collections.Generic;
+using System.Linq;
 using System.Numerics;
+// ReSharper disable CompareOfFloatsByEqualityOperator
 
 namespace ProjectEuler.Problems
 {
-    class Problem66 : Problem
+    internal class Problem66 : Problem
     {
         public override void Run()
         {
-            BigInteger largestSquareNumber = new BigInteger(25000000) * new BigInteger(25000000);
-            HashSet<BigInteger> squareHashset = new HashSet<BigInteger>();
-            for(BigInteger i = 1; i <= 2500000000; i++)
+            List<int> dList = Enumerable.Range(1, 100).ToList();
+            dList.RemoveAll(u => Math.Sqrt(u) % 1 == 0.0);  //    Removes square numbers
+
+            List<long> xList = new List<long>();
+
+            foreach (int d in dList)
             {
-                squareHashset.Add(i * i);
+                xList.Add(FindMinimalSolutionX(d));
             }
 
-            List<int> D = new List<int>();
+            long maxX = long.MinValue;
+            int maxXi = 0;
 
-            for (int i = 1; i <= 1000; i++)
+            for (int i = 0; i < xList.Count; i++)
             {
-                if(!IsASquareNumber(i))
-                {
-                    D.Add(i);
-                }
+                if (xList[i] <= maxX) continue;
+                maxX = xList[i];
+                maxXi = i;
             }
 
-            BigInteger maxX = 0;
+            Console.WriteLine("Result: {0}", dList[maxXi]);
 
-            foreach (int d in D)
-            {
-                BigInteger x = 0;
-                BigInteger temp = 0;
-                while (!squareHashset.Contains(temp))
-                {
-                    x++;
-
-                    if ((x * x - 1) % d == 0)
-                    {
-                        temp = (x * x - 1) / d;
-                    }
-                    else
-                    {
-                        temp = 0;
-                    }
-
-                    if (temp > largestSquareNumber)
-                    {
-                        throw new Exception("Precomputed squares hashset isn't large enough");
-                    }
-                }
-
-                if (x > maxX)
-                {
-                    maxX = x;
-                }
-            }
-
-
-            Console.WriteLine("Result is: {0}", maxX);
         }
 
-        private bool IsASquareNumber(int i)
+        private static long FindMinimalSolutionX(int d)
         {
-            return Math.Sqrt(i) % 1 == 0;
+            for (long x = 2; ; x++)
+            {
+                //y^2 = (x*x - 1) / D
+                double value = (x * x - 1) / (double)d;
+                if (value != Math.Truncate(value)) continue;
+                if (Math.Sqrt(value) % 1 == 0.0) return x;
+            }
         }
     }
 }

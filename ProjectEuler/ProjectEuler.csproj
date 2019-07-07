@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PrimeSieve">
-      <HintPath>..\..\PrimeSieve\PrimeSieve\bin\Release\PrimeSieve.dll</HintPath>
+      <HintPath>..\ProjectEulerLibrary\PrimeSieve.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
