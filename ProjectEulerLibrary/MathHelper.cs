@@ -518,5 +518,18 @@ namespace ProjectEulerLibrary
         {
             return SortString(str1).CompareTo(SortString(str2)) == 0;
         }
+
+        //  https://codereview.stackexchange.com/a/173419/99715
+        public static int GreatestCommonDenominator(int x, int y)
+        {
+            while (y != 0)
+            {
+                int tmp = x % y;
+                x = y;
+                y = tmp;
+            }
+
+            return x;
+        }
     }
 }

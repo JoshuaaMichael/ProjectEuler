@@ -51,6 +51,7 @@
     <Compile Include="BenchMarking.cs" />
     <Compile Include="Problems\Classes\SuDokuPuzzle.cs" />
     <Compile Include="Problems\Problem.cs" />
+    <Compile Include="Problems\Problem075.cs" />
     <Compile Include="Problems\Problem094.cs" />
     <Compile Include="Problems\Problem109.cs" />
     <Compile Include="Problems\Problem098.cs" />
